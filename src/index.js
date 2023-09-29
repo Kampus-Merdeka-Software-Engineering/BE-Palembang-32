@@ -2,6 +2,7 @@ const express = require('express');
 
 const usersRoutes = require('./routes/users');
 const dokterRoutes = require('./routes/dokter');
+const bookRoutes = require('./routes/book');
 
 const MiddlewareLogRequest = require('./middleware/logs');
 
@@ -11,6 +12,7 @@ app.use(MiddlewareLogRequest);
 app.use(express.json());
 app.use('/users', usersRoutes);
 app.use('/dokter', dokterRoutes);
+app.use('/book', bookRoutes);
 
 
 app.listen(4000, () => {
