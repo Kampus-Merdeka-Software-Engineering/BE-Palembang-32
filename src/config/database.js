@@ -5,6 +5,8 @@ const dbpool = mysql.createPool({
     user: 'root',
     password: 'i0Dd3zGnPgRhhAEPkH2B',
     database: 'railway',
+    connectTimeout: 60000,
   });
 
   module.exports = dbpool.promise();
+  
