@@ -1,10 +1,10 @@
 const mysql = require('mysql2');
 
 const dbpool = mysql.createPool({
-    host: 'containers-us-west-67.railway.app',
-    user: 'root',
-    password: 'i0Dd3zGnPgRhhAEPkH2B',
-    database: 'railway',
+    host: 'db4free.net',
+    user: 'kevinteguh64',
+    password: 'Optimus2x',
+    database: 'revoucapstonedb',
     connectTimeout: 60000,
   });
 
