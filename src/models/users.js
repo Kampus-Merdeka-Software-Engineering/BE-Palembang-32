@@ -7,15 +7,15 @@ const getAllUsers = () => {
 }
 
 const createNewUser = (body) => {
-    const SQLQuery = `  INSERT INTO users (nama, email, adress) 
-                        VALUES ('${body.nama}', '${body.email}', '${body.adress}')`;
+    const SQLQuery = `  INSERT INTO users (username, email, password) 
+                        VALUES ('${body.username}', '${body.email}', '${body.password}')`;
     
     return dbpool.execute(SQLQuery);
 }
 
 const updateUser = (body, idUser) => {
     const SQLQuery = `  UPDATE users 
-                        SET nama='${body.nama}', email='${body.email}', adress='${body.adress}'
+                        SET username='${body.username}', email='${body.email}', password='${body.password}'
                         WHERE id=${idUser}`;
 
     return dbpool.execute(SQLQuery);                   

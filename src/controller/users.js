@@ -20,7 +20,7 @@ const getAllUsers = async (req, res) => {
 const createNewUser = async (req, res) => {
     const {body} = req;
 
-    if (!body.nama || !body.email || !body.adress) {
+    if (!body.username || !body.email || !body.password) {
         return res.status(400).json({
             message: 'Anda Memasukan Data yang Salah',
             data: null,

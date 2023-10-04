@@ -10,9 +10,9 @@ const app = express();
 
 app.use(MiddlewareLogRequest);
 app.use(express.json());
-app.use('/users', usersRoutes);
-app.use('/dokter', dokterRoutes);
-app.use('/book', bookRoutes);
+app.use('/api/users', usersRoutes);
+app.use('/api/dokter', dokterRoutes);
+app.use('/api/book', bookRoutes);
 
 
 app.listen(4000, () => {
