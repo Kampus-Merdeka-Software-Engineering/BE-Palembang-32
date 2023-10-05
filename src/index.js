@@ -11,8 +11,8 @@ const app = express();
 
 app.use(MiddlewareLogRequest);
 app.use(express.json());
-app.use(express.static("src/public"));
-app.use("/singup", express.static("public/Singup.html"));
+app.use(express.static("/src/public"));
+app.use("/singup", express.static("/src/public/Singup.html"));
 app.use('/api/users', usersRoutes);
 app.use('/api/dokter', dokterRoutes);
 app.use('/api/book', bookRoutes);
