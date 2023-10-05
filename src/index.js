@@ -17,6 +17,10 @@ app.use('/api/users', usersRoutes);
 app.use('/api/dokter', dokterRoutes);
 app.use('/api/book', bookRoutes);
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
 var server = app.listen(port, () => {
     console.log('Server berhasil di running di port 4000');
