@@ -7,15 +7,15 @@ const getAllBook = () => {
 }
 
 const createNewBook = (body) => {
-    const SQLQuery = `  INSERT INTO Book (nama, number, namaDokter, dateBook) 
-                        VALUES ('${body.nama}', '${body.number}', '${body.namaDokter}', '${body.dateBook}')`;
+    const SQLQuery = `  INSERT INTO Book (nama, number, namaDokter, dateBook, question) 
+                        VALUES ('${body.nama}', '${body.number}', '${body.namaDokter}', '${body.dateBook}', '${body.question}')`;
     
     return dbpool.execute(SQLQuery);
 }
 
 const updateBook = (body, idBook) => {
     const SQLQuery = `  UPDATE Book 
-                        SET nama='${body.nama}', number='${body.number}', namaDokter='${body.namaDokter}', dateBook='${body.dateBook}'
+                        SET nama='${body.nama}', number='${body.number}', namaDokter='${body.namaDokter}', dateBook='${body.dateBook}', question='${body.question}'
                         WHERE id=${idBook}`;
 
     return dbpool.execute(SQLQuery);                   

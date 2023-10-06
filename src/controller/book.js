@@ -20,7 +20,7 @@ const getAllBook = async (req, res) => {
 const createNewBook = async (req, res) => {
     const {body} = req;
 
-    if (!body.nama || !body.number || !body.namaDokter || !body.dateBook) {
+    if (!body.nama || !body.number || !body.namaDokter || !body.dateBook || !body.question) {
         return res.status(400).json({
             message: 'Anda Memasukan Data yang Salah',
             data: null,
