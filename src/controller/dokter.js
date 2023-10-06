@@ -20,7 +20,7 @@ const getAllDokter = async (req, res) => {
 const createNewDokter = async (req, res) => {
     const {body} = req;
 
-    if (!body.nama || !body.bidang || !body.deskripsi || !body.email || !body.telepon) {
+    if (!body.nama || !body.bidang) {
         return res.status(400).json({
             message: 'Anda Memasukan Data yang Salah',
             data: null,
