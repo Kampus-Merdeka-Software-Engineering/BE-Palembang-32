@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 
 const usersRoutes = require('./routes/users');
@@ -22,6 +23,6 @@ app.use('/api/dokter', dokterRoutes);
 app.use('/api/book', bookRoutes);
 
 var server = app.listen(port, () => {
-    console.log('Server berhasil di running di port 4000');
+    console.log(`Server berhasil di running di port ${PORT}`);
 })
 server.keepAliveTimeout = 30000;
