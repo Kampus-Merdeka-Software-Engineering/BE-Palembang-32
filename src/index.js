@@ -23,6 +23,6 @@ app.use('/api/dokter', dokterRoutes);
 app.use('/api/book', bookRoutes);
 
 var server = app.listen(port, () => {
-    console.log(`Server berhasil di running di port ${PORT}`);
+    console.log(`Server berhasil di running di port ${port}`);
 })
 server.keepAliveTimeout = 30000;
