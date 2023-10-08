@@ -1,5 +1,6 @@
 require('dotenv').config()
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const usersRoutes = require('./routes/users');
 const dokterRoutes = require('./routes/dokter');
@@ -15,6 +16,8 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type', 'application/json');
     next();
 })
+
+app.use(bodyParser.json());
 
 app.use(MiddlewareLogRequest);
 app.use(express.json());
