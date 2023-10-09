@@ -7,15 +7,15 @@ const getAllDokter = () => {
 }
 
 const createNewDokter = (body) => {
-    const SQLQuery = `  INSERT INTO dokter (nama, bidang) 
-                        VALUES ('${body.nama}', '${body.bidang}')`;
+    const SQLQuery = `  INSERT INTO dokter (nama, bidang, gambar) 
+                        VALUES ('${body.nama}', '${body.bidang}', '${body.gambar}')`;
     
     return dbpool.execute(SQLQuery);
 }
 
 const updateDokter = (body, idDokter) => {
     const SQLQuery = `  UPDATE dokter 
-                        SET nama='${body.nama}', bidang='${body.bidang}'
+                        SET nama='${body.nama}', bidang='${body.bidang}', gambar='${body.gambar}'
                         WHERE id=${idDokter}`;
 
     return dbpool.execute(SQLQuery);                   
